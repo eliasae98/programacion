@@ -1,0 +1,55 @@
+#include "stdafx.h"
+#include <iostream.h>
+#include "math.h"
+#include "conio.h"
+
+using namespace std;
+
+float discriminante(float x, float t, float z);
+void main()
+{
+  float a,b,c,t,r,x1,p,x2;
+  cout<<"introduzca el valor de a";
+  cin>>a;
+  cout<<"introduzca el valor de b";
+  cin>>b;
+  cout<<"introduzca el valor de c";
+  cin>>c;
+  t=discriminante(a,b,c);
+  if(t<0)
+  {
+    cout<<"la ecuacion tiene solucion imaginaria";
+    r=sqrt(-t);
+    cout<<"la x1 es igual a:";
+    x1=(-b)/2*a;
+    x2=r/2*a
+    cout<< x1<<"+"<<"i";
+    cout<< x1<<"-"<<"i";
+  }
+  else
+  {  if(t==0)
+     {
+        cout<<"la ecuacion tiene una unica solucion";
+        x1=-b/2*a;
+      }
+   else
+     {
+        r=sqrt(t);
+        cout<<"la x1 es igual a:";
+        x1=((-b)+r)/2*a;
+        cout<< x1;
+        cout<<"la x2 es igual a:";
+        x2=((-b)-r)/2*a;
+        cout<< x2;
+      }
+    }
+   getch();
+  }
+  
+  
+float discriminante(float x, float y, float z)
+{  
+    float p;
+    p=(y*y)-4*8x*z)
+    return p;
+}
